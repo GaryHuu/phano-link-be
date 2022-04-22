@@ -13,5 +13,7 @@ router.delete(
   authAdmin,
   usersController.deleteAccount
 )
+router.patch('/update', auth, usersController.updateInformation)
+router.patch('/update/address', auth, usersController.updateAddress)
 
 module.exports = router

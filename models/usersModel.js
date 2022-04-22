@@ -24,11 +24,15 @@ const usersSchema = new mongoose.Schema(
     gender: {
       type: String,
       required: true,
+      default: 'male',
     },
     address: {
       type: Object,
       require: true,
-      trim: true,
+    },
+    birthday: {
+      type: String,
+      default: null,
     },
     role: {
       type: String, // admin | user
@@ -36,6 +40,10 @@ const usersSchema = new mongoose.Schema(
       default: 'user',
     },
     cart: {
+      type: Array,
+      default: [],
+    },
+    favorite: {
       type: Array,
       default: [],
     },
